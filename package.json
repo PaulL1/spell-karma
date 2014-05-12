@@ -1,0 +1,48 @@
+{
+  "name": "warlock-spell-karma",
+  "version": "1.0.0-alpha.1",
+  "description": "An addon to add karma unit testing to the Warlock spell for managing client-side webapps.",
+  "homepage": "https://github.com/ngbp/spell-karma",
+  "author": {
+    "name": "Warlock Team",
+    "url": "http://getwarlock.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ngbp/spell-karma.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ngbp/spell-karma"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/ngbp/spell-karma/blob/master/LICENSE"
+    }
+  ],
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "peerDependencies": {
+    "warlock-spell-webapp": "~1.0.0"
+  },
+  "keywords": [
+    "warlockplugin",
+    "warlockspell"
+  ],
+  "warlock": {
+    "globs": {
+      "test": {
+        "karma": {
+          "config": "karma/karma.conf.js"
+          "specs": [
+            "<%= paths.source_app %>/**/*.spec.js"
+          ]
+        }
+      }
+    }
+  },
+  "dependencies": {
+    "gulp-karma": "^0.0.4"
+  }
+}
